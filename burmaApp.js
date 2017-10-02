@@ -41,15 +41,11 @@
     }
 
     animalValue(value) {
-      let cows = 0;
-      let pigs = 0;
-      let chickens = 0;
-
-      cows = Math.floor(value / 2000);
-      if(cows >= 1) { value = value % 2000; }
-      pigs = Math.floor(value / 100);
-      if(pigs >= 1) { value = value % 100; }
-      chickens = Math.floor(value);
+      const cows = Math.floor(value / 2000);
+      value = value % 2000;
+      const pigs = Math.floor(value / 100);
+      value = value % 100;
+      const chickens = Math.floor(value);
 
       return  {
         cow: cows,
